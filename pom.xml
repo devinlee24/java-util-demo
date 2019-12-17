@@ -35,6 +35,7 @@
             <artifactId>junit</artifactId>
         </dependency>
 
+        <!-- ftp客户端依赖包 -->
         <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
