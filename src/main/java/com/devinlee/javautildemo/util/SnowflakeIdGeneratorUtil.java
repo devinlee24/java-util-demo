@@ -1,7 +1,7 @@
 package com.devinlee.javautildemo.util;
 
 /**
- * snowflake算法实现分布式ID生成
+ * 	snowflake算法ID生成工具类
  * 算法单机每秒内理论上最多可以生成1000*(2^12)，也就是400W的ID
  */
 public class SnowflakeIdGeneratorUtil {
