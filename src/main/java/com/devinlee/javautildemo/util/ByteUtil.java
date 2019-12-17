@@ -3,7 +3,7 @@ package com.devinlee.javautildemo.util;
 import java.math.BigInteger;
 
 /**
- * 字节工具类
+ * 字节操作工具类
  */
 public class ByteUtil {
 
