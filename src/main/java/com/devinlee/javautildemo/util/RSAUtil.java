@@ -15,6 +15,7 @@ import org.apache.commons.codec.binary.Base64;
 
 /**
  * RSA非对称性加/解密
+ * (注意：不能公钥签名私钥验证，那样的话谁都可以对数据签名，无法防止伪造数据。)
  */
 public class RSAUtil {
 
