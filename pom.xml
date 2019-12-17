@@ -78,6 +78,7 @@
             <version>2.6</version>
         </dependency>
 
+        <!-- commons-beanutils -->
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
