@@ -14,7 +14,7 @@ import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
 /**
- * ftp上传下载工具类
+ * FTP上传下载工具类
  */
 public class FtpUtil {
 
