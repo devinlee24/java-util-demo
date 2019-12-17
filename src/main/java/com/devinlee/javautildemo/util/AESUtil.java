@@ -17,14 +17,14 @@ import org.slf4j.LoggerFactory;
 import java.util.Base64;
 
 /**
- * AES对称加密和解密
+ * AES对称性加/解密
  * @author devinlee
  *
  */
 
-public class AesUtil {
+public class AESUtil {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AesUtil.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AESUtil.class);
 
     public static String key = "devinlee";
 
