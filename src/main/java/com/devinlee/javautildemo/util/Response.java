@@ -26,20 +26,20 @@ public enum Response {
     /* 区间表示接口异常：3000-3999 */
     ERROR(3001,"系统异常");
 
-    Response(Integer retCode, String retMsg) {
-        this.retCode = retCode;
-        this.retMsg = retMsg;
+    Response(Integer code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
-    public Integer retCode() {
-        return retCode;
+    public Integer code() {
+        return code;
     }
 
-    public String retMsg() {
-        return retMsg;
+    public String message() {
+        return message;
     }
 
-    private Integer retCode;
+    private Integer code;
 
-    private String retMsg;
+    private String message;
 }
