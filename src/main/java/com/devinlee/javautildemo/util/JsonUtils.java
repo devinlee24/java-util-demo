@@ -6,8 +6,9 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * json转换工具类
+ * Json转换工具类
  * @author devinlee
+ * @date 2019/12/17 15:58
  */
 public class JsonUtils {
 
