@@ -20,7 +20,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 /**
- * Apache HttpClient
+ * Http请求工具类
+ * @author devinlee
  */
 public class HttpClientUtil {
 
