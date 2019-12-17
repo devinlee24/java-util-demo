@@ -4,7 +4,7 @@ package com.devinlee.javautildemo.util;
  * 响应状态枚举
  * @author devinlee
  */
-public enum ResponseCode {
+public enum Response {
 
     /* 成功状态码 */
     SUCCESS(0,"SUCCESS"),
@@ -26,7 +26,7 @@ public enum ResponseCode {
     /* 区间表示接口异常：3000-3999 */
     ERROR(3001,"系统异常");
 
-    ResponseCode(Integer retCode, String retMsg) {
+    Response(Integer retCode, String retMsg) {
         this.retCode = retCode;
         this.retMsg = retMsg;
     }
