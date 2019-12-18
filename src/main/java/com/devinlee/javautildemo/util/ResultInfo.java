@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 返回结果封装
+ * 封装统一返回结果
  *
  * @author devinlee
  */
