@@ -19,6 +19,17 @@ public class NetTestUtil {
      * 测试ping主机地址的连通性
      *
      * @param hostname
+     * @return
+     */
+    public static boolean ping(String hostname) {
+
+        return ping(hostname, 5000);
+    }
+
+    /**
+     * 测试ping主机地址的连通性
+     *
+     * @param hostname
      * @param timeout
      * @return
      */
@@ -32,6 +43,18 @@ public class NetTestUtil {
             log.error(e.getMessage());
         }
         return false;
+    }
+
+    /**
+     * 测试telnet机器端口的连通性
+     *
+     * @param hostname
+     * @param port
+     * @return
+     */
+    public static boolean telnet(String hostname, int port) {
+
+        return telnet(hostname, port, 5000);
     }
 
     /**
