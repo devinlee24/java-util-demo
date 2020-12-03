@@ -359,4 +359,46 @@ public class FileUtils {
 
         return flag;
     }
+
+
+    /**
+     * 复制文件
+     * @param filePath
+     *
+     * Created by devinlee on 2017.12.03
+     */
+    public static void copyFile(String filePath) throws Exception {
+        //转换的原文件对象，新文件对象
+        File oldfile = new File(filePath), newFile = null;
+        //新文件名下标从2开始
+        int index = 2;
+        //用来储存路径的字符对象
+        StringBuilder stringBuilder = new StringBuilder();
+        //循环检查文件是否存在，直到可创建为止
+        while (true) {
+            stringBuilder.append(oldfile.getAbsolutePath());//原文件名(绝对路径)
+            stringBuilder.insert(stringBuilder.lastIndexOf("."), "(" + index + ")");//生成新文件名
+            newFile = new File(stringBuilder.toString());//初始化新文件对象
+            //检查文件是否已存在
+            if (!newFile.exists()) {
+                newFile.createNewFile();//创建文件
+                break;
+            }
+            stringBuilder.setLength(0);//清空已存在的文件路径
+            index++;//文件已存在，下标增加1，尝试下一个路径，直到文件不存在为止
+        }
+        //原文件的字节输入流
+        FileInputStream oldFileInputStream = new FileInputStream(oldfile);
+        //新文件的字节输出流
+        FileOutputStream newFileOutputStream = new FileOutputStream(newFile);
+
+        byte[] buff = new byte[1024];//设置内存缓存区(提高读取效率)
+        int length = 0;//记录每次读取返回的内容长度
+        while ((length = oldFileInputStream.read(buff)) != -1){
+            //将每次读取的字节内容写入新文件
+            newFileOutputStream.write(buff);
+        }
+        newFileOutputStream.close();//最后记得关闭输出流
+        oldFileInputStream.close();//最后记得关闭输入流
+    }
 }
