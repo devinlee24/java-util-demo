@@ -365,7 +365,7 @@ public class FileUtils {
      * 复制文件
      * @param filePath
      *
-     * Created by devinlee on 2017.12.03
+     * Created by devinlee on 2017.05.26
      */
     public static void copyFile(String filePath) throws Exception {
         //转换的原文件对象，新文件对象
