@@ -362,7 +362,7 @@ public class FileUtils {
 
 
     /**
-     * 指定路径复制文件
+     * 复制二进制文件
      * @param filePath
      *
      * Created by devinlee on 2017.05.26
