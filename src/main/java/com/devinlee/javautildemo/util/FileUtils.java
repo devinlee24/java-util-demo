@@ -362,7 +362,7 @@ public class FileUtils {
 
 
     /**
-     * 复制文件
+     * 指定路径复制文件
      * @param filePath
      *
      * Created by devinlee on 2017.05.26
@@ -371,21 +371,21 @@ public class FileUtils {
         //转换的原文件对象，新文件对象
         File oldfile = new File(filePath), newFile = null;
         //新文件名下标从2开始
-        int index = 2;
+        int fileIndex = 2;
         //用来储存路径的字符对象
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder tempStringPath = new StringBuilder();
         //循环检查文件是否存在，直到可创建为止
         while (true) {
-            stringBuilder.append(oldfile.getAbsolutePath());//原文件名(绝对路径)
-            stringBuilder.insert(stringBuilder.lastIndexOf("."), "(" + index + ")");//生成新文件名
-            newFile = new File(stringBuilder.toString());//初始化新文件对象
+            tempStringPath.append(oldfile.getAbsolutePath());//原文件名(绝对路径)
+            tempStringPath.insert(tempStringPath.lastIndexOf("."), "(" + fileIndex + ")");//生成新文件名
+            newFile = new File(tempStringPath.toString());//初始化新文件对象
             //检查文件是否已存在
             if (!newFile.exists()) {
                 newFile.createNewFile();//创建文件
                 break;
             }
-            stringBuilder.setLength(0);//清空已存在的文件路径
-            index++;//文件已存在，下标增加1，尝试下一个路径，直到文件不存在为止
+            tempStringPath.setLength(0);//清空已存在的文件路径
+            fileIndex++;//文件已存在，下标增加1，尝试下一个路径，直到文件不存在为止
         }
         //原文件的字节输入流
         FileInputStream oldFileInputStream = new FileInputStream(oldfile);
